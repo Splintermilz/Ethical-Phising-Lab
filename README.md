@@ -1,10 +1,6 @@
-# Ethical-Phising-Lab : Stack Debian / PostFix / Gophish
+# Ethical-Phising-Lab : Stack Debian / PostFix / GoPhish
 Projet de sensibilisation à destination d'entreprise pour lutter contre le phishing.
-=======
-Ethical Phishing Lab : Postfix + GoPhish via Debian
- 45a21a0 (feat: lancement du projet)
-=======
-# Ethical Phishing Lab — Postfix + GoPhish on Debian
+
 
 ![Platform](https://img.shields.io/badge/platform-Debian%2012-red?style=flat-square&logo=debian)
 ![Tool](https://img.shields.io/badge/tool-GoPhish-blue?style=flat-square)
