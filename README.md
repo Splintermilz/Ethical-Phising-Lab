@@ -75,7 +75,7 @@ Lors de l'assistant de configuration interactif, choisir :
 ### 1.2 Fichier `main.cf`
 
 ```bash
-sudo nano /etc/postfix/main.cf
+sudo vim /etc/postfix/main.cf
 ```
 
 Ajouter ou modifier les lignes suivantes :
