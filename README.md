@@ -7,7 +7,7 @@ Projet de sensibilisation à destination d'entreprise pour lutter contre le phis
 ![SMTP](https://img.shields.io/badge/SMTP-Postfix-orange?style=flat-square)
 ![Context](https://img.shields.io/badge/context-educational%20only-yellow?style=flat-square)
 
-> **Contexte académique — usage local uniquement.**
+> **Contexte académique : usage local uniquement.**
 > Ce projet est réalisé dans l'optique de sensibiliser des collaborateurs d'entreprises aux risques liés au phishing.
 > Toute utilisation en dehors d'un environnement isolé et avec des cibles non consentantes
 > est illégale et contraire à l'éthique. Ne jamais déployer cette stack sur Internet.
@@ -42,7 +42,7 @@ Projet de sensibilisation à destination d'entreprise pour lutter contre le phis
 | Couche | Composant | Rôle |
 |--------|-----------|------|
 | OS | Debian 12 | Base système |
-| Serveur | Postfix 3.7.x | MTA — Mail Transfer Agent |
+| Serveur | Postfix 3.7.x | MTA : Mail Transfer Agent |
 | Application | GoPhish 0.12.1 | Orchestrateur de campagne |
 
 > **Go n'est pas requis.** J'utilise le binaire pré-compilé de la release officielle GoPhish.
@@ -94,16 +94,15 @@ inet_protocols = ipv4
 > | `myhostname` | `mail.donotclick.com` | Identité du serveur annoncée lors du EHLO SMTP |
 > | `mydomain` | `donotclick.com` | Domaine de référence pour les mails sortants |
 > | `myorigin` | `$mydomain` | Domaine affiché dans l'adresse expéditeur |
-> | `inet_protocols` | `ipv4` | Désactive IPv6 — évite les comportements inattendus en lab |
+> | `inet_protocols` | `ipv4` | Désactive IPv6 : évite les comportements inattendus en lab |
 >
 > Les autres directives (`inet_interfaces = loopback-only`, `mynetworks = 127.0.0.0/8`,
 > `default_transport = error`) sont déjà correctement configurées par Debian lors
-> de la sélection `Local only` — ne pas y toucher.
+> de la sélection `Local only`.
 
 > **Note :** toutes les commandes d'édition nécessitent `sudo`.
-> Ne pas modifier les permissions des fichiers Postfix (`chmod` inutile et dangereux).
+> Ne pas modifier les permissions des fichiers Postfix / On sauvegarde et on recharge :
 
-Sauvegarder (`Ctrl+X` → `Y` → `Entrée`), puis recharger :
 
 ```bash
 sudo systemctl reload postfix
@@ -150,7 +149,7 @@ swaks --to root@localhost --from test@donotclick.com --server 127.0.0.1:25
 > **Pourquoi `root@localhost` et pas `root@donotclick.com` ?**
 > `root@localhost` est une boîte mail qui existe réellement sur le système Debian
 > (stockée dans `/var/mail/root`). Postfix peut y livrer sans résolution DNS.
-> `donotclick.com` est un domaine fictif — il n'y a pas de vraie boîte derrière,
+> `donotclick.com` est un domaine fictif, il n'y a pas de vraie boîte derrière,
 > Postfix échouerait à résoudre le domaine.
 >
 > - Test Postfix → `root@localhost` (boîte réelle, livraison garantie)
@@ -184,7 +183,7 @@ sudo journalctl -t postfix --no-pager | tail -30
 
 ## 2. Installation de GoPhish
 
-> *En cours de rédaction — sera publié dans la prochaine release.*
+> *En cours de rédaction, sera publié dans la prochaine release.*
 
 ---
 
