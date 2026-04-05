@@ -23,11 +23,11 @@ sudo apt update && sudo apt install -y postfix
 
 L'installateur ouvre un assistant interactif. Sélectionner **"Local uniquement"** :
 
-![Sélection Local uniquement](/assets/screenshots/postfix-local-only.png)
+![Sélection Local uniquement](assets/screenshots/postfix-local-only.png)
 
 Puis renseigner le domaine fictif **`donotclick.com`** :
 
-![System mail name donotclick.com](../assets/screenshots/postfix-mailname.png)
+![System mail name donotclick.com](assets/screenshots/postfix-mailname.png)
 
 ---
 
@@ -73,7 +73,7 @@ sudo systemctl enable postfix && sudo systemctl restart postfix
 sudo systemctl status postfix
 ```
 
-![systemctl status postfix — active running](../assets/screenshots/postfix-status.png)
+![systemctl status postfix — active running](assets/screenshots/postfix-status.png)
 
 ---
 
@@ -85,7 +85,7 @@ sudo systemctl status postfix
 ss -tlnp | grep :25
 ```
 
-![Port 25 en écoute sur 127.0.0.1](../assets/screenshots/postfix-port25.png)
+![Port 25 en écoute sur 127.0.0.1](assets/screenshots/postfix-port25.png)
 
 Le port 25 est ouvert automatiquement à l'installation, aucune configuration nécessaire.
 
@@ -99,7 +99,7 @@ Le port 25 est ouvert automatiquement à l'installation, aucune configuration n�
 swaks --to root@localhost --from test@donotclick.com --server 127.0.0.1:25
 ```
 
-![Sortie swaks — 250 Ok queued](../assets/screenshots/postfix-swaks.png)
+![Sortie swaks — 250 Ok queued](assets/screenshots/postfix-swaks.png)
 
 > **Pourquoi `root@localhost` ?**
 > C'est la seule boîte mail qui existe réellement sur le système (dans `/var/mail/root`).
@@ -111,7 +111,7 @@ swaks --to root@localhost --from test@donotclick.com --server 127.0.0.1:25
 sudo cat /var/mail/root
 ```
 
-![cat /var/mail/root — mail reçu](../assets/screenshots/postfix-mailrecu.png)
+![cat /var/mail/root — mail reçu](assets/screenshots/postfix-mailrecu.png)
 
 ### Consulter les logs
 
