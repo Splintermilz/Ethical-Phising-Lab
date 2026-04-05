@@ -91,11 +91,14 @@ Le port 25 est ouvert automatiquement à l'installation, aucune configuration n�
 
 ### Envoyer un mail de test
 
-> `mail` n'est pas disponible sur Debian 12 — j'utilise `swaks`
+> `mail` n'est pas disponible sur Debian 12, j'utilise `swaks`
 > (Swiss Army Knife SMTP), l'outil de référence pour tester un handshake SMTP.
 
-```bash
+![Mail indisponible sur Debian](assets/screenshots/postfix-mail.png)
 
+
+```bash
+sudo apt install swaks
 swaks --to root@localhost --from test@donotclick.com --server 127.0.0.1:25
 ```
 
@@ -103,7 +106,7 @@ swaks --to root@localhost --from test@donotclick.com --server 127.0.0.1:25
 
 > **Pourquoi `root@localhost` ?**
 > C'est la seule boîte mail qui existe réellement sur le système (dans `/var/mail/root`).
-> `donotclick.com` est fictif — Postfix ne peut pas résoudre ce domaine localement.
+> `donotclick.com` est fictif, Postfix ne peut pas résoudre ce domaine localement.
 
 ### Lire le mail reçu
 
