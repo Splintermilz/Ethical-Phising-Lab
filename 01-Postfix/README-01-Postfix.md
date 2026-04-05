@@ -23,7 +23,7 @@ sudo apt update && sudo apt install -y postfix
 
 L'installateur ouvre un assistant interactif. Sélectionner **"Local uniquement"** :
 
-![Sélection Local uniquement](../assets/screenshots/postfix-local-only.png)
+![Sélection Local uniquement](/assets/screenshots/postfix-local-only.png)
 
 Puis renseigner le domaine fictif **`donotclick.com`** :
 
@@ -46,7 +46,7 @@ myorigin   = $mydomain
 inet_protocols = ipv4
 ```
 
-![Fichier main.cf configuré](../assets/screenshots/postfix-maincf.png)
+![Fichier main.cf configuré](assets/screenshots/postfix-maincf.png)
 
 | Directive | Valeur | Rôle |
 |-----------|--------|------|
