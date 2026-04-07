@@ -24,7 +24,7 @@ Il est conçu pour démontrer concrètement les mécaniques d'une attaque par ph
 ┌─────────────┐        ┌──────────────────┐        ┌──────────────────┐
 │   GoPhish   │──SMTP──▶    Postfix       │──────▶ │  Cible (interne) │
 │  :3333 UI   │        │  localhost:25    │        │  boîte mail test │
-│  :80 landing│        │                  │        │                  │
+|:8080 landing│        │                  │        │                  │
 └─────────────┘        └──────────────────┘        └──────────────────┘
       │                                                      │
       │◀──────────── {{.Tracker}} ouverture mail ────────────│
