@@ -1,4 +1,4 @@
-# Ethical Phishing Lab — Debian / Postfix / GoPhish
+# Ethical Phishing Lab - Debian / Postfix / GoPhish
 
 
 ![Platform](https://img.shields.io/badge/platform-Debian%2012-red?style=flat-square&logo=debian)
@@ -38,7 +38,7 @@ Il est conçu pour démontrer concrètement les mécaniques d'une attaque par ph
 | Couche | Composant | Rôle |
 |--------|-----------|------|
 | OS | Debian 12 (Bookworm) | Base système |
-| Serveur | Postfix 3.7.x | MTA — Mail Transfer Agent |
+| Serveur | Postfix 3.7.x | MTA - Mail Transfer Agent |
 | Application | GoPhish 0.12.1 | Orchestrateur de campagne |
 
 ---
@@ -47,8 +47,8 @@ Il est conçu pour démontrer concrètement les mécaniques d'une attaque par ph
 
 | # | Partie | Statut |
 |---|--------|--------|
-| 01 | [Serveur SMTP — Postfix](./01-postfix/README.md) | ✅ |
-| 02 | [Framework — GoPhish](./02-gophish/README.md) | 🔄 |
+| 01 | [Serveur SMTP - Postfix](./01-postfix/README.md) | ✅ |
+| 02 | [Framework - GoPhish](./02-gophish/README.md) | ✅ |
 | 03 | [Campagne & Tracking](./03-campagne/README.md) | ⏳ |
 
 ---
