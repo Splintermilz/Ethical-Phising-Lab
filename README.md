@@ -1,4 +1,4 @@
-# Ethical Phishing Lab - Debian / Postfix / GoPhish
+# Ethical Phishing Lab - Debian | Postfix | GoPhish
 
 
 ![Platform](https://img.shields.io/badge/platform-Debian%2012-red?style=flat-square&logo=debian)
@@ -22,7 +22,7 @@ Il est conçu pour démontrer concrètement les mécaniques d'une attaque par ph
 
 ```
 ┌─────────────┐        ┌──────────────────┐        ┌──────────────────┐
-│   GoPhish   │──SMTP──▶    Postfix        │──────▶ │  Cible (interne) │
+│   GoPhish   │──SMTP──▶    Postfix       │──────▶ │  Cible (interne) │
 │  :3333 UI   │        │  localhost:25    │        │  boîte mail test │
 │  :80 landing│        │                  │        │                  │
 └─────────────┘        └──────────────────┘        └──────────────────┘
